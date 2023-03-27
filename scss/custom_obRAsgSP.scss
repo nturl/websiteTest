@@ -1,0 +1,130 @@
+/* 
+Compile this file to css/custom_obRAsgSP.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* Slide 07 (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-07-ace7bd0b"] */
+.slide[data-cid="slide-07-ace7bd0b"]{
+	.button.play.button-7 {
+    margin: 0 20px;
+  }
+  @include media(1100px, max) {
+    .button.play.button-7 {
+      display: block;
+      margin: 30px auto;
+    }
+  }
+}
+
+/* Slide 09 (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-09-65a324a6"] */
+.slide[data-cid="slide-09-65a324a6"]{
+  @include media(1335px, max) {
+    form.slides-form .input-9,
+    form.slides-form .button-9 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+      width: 300px;
+    }
+  }
+}
+
+/* Slide 12 (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-12-dd7a5bd9"] */
+.slide[data-cid="slide-12-dd7a5bd9"]{
+  @include media($phablet, min) {
+    form.slides-form .input-12 {
+      max-width: 300px;
+    }
+  }
+}
+
+/* Slide 104 (#4) */
+
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-104-dc975509"] */
+.slide[data-cid="slide-104-dc975509"]{
+  .slider-104{
+    img{
+      width:300px;
+      border:0px solid transparent;
+      transition: .5s;
+    }
+    .slick-slide{
+      &.slick-current{
+        img{
+          border: 10px solid $blue;
+          opacity:1 !important;
+        }
+      }
+    }
+  }
+  .slider-104-arrow{
+    @include media($phablet, max) {
+      .slick-prev{
+        margin-right: 0!important;
+        float: right;
+      }
+      .slick-next{
+        float: none;
+      }
+    }
+    &:hover{
+      svg{
+        opacity:0.6;
+      }
+    }
+    svg{
+      transition: .15s;
+    }
+  }
+  .slider-104-controller{
+    @include media($phablet, max) {
+      order:1;
+    }
+  }
+  .social-104:hover{
+    opacity: 1 !important;
+  }
+}
+
+/* Slide 68 (#5) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-68-8c2ed196"] */
+.slide[data-cid="slide-68-8c2ed196"]{
+  .flex-68 a {
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    opacity: 0.9;
+    transition: opacity 0.1s ease-in, transform 0.15s cubic-bezier(0.5, 0, 0.25, 2.5);
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  &.whiteSlide .tintLogos {
+    filter: brightness(0.2);
+  }
+  &:not(.whiteSlide) .tintLogos {
+    filter: brightness(1.3);
+  }
+}
+
+/* Slide 110 (#6) */
+
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-110-95e8d3ad"] */
+.slide[data-cid="slide-110-95e8d3ad"]{
+  .swiper-slide-110{
+    max-width: 300px;
+  }
+  .box-110{
+    background: $default-white-color;
+    box-shadow: $large-shadow;
+  }
+}
